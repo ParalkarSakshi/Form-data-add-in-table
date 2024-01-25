@@ -1,0 +1,28 @@
+<div class="container">
+    <form class="row g-3" (ngSubmit)="Submit()" >
+        <label for="name" class="visually-hidden">Name</label>
+        <input type="text" class="form-control" [(ngModel)]="name" id="name" placeholder="name" name="name">
+      
+        <label for="password" class="visually-hidden">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="password" name="email">
+      
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+    </form>
+</div>
+    
+      <table class="table" *ngIf="submit">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Password</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{name}}</td>
+            <td>{{password}}</td>
+          </tr>
+        </tbody>
+      </table>
+    
+    
